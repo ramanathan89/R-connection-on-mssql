@@ -1,0 +1,14 @@
+install.packages("RSQLServer")
+install.packages("RODBC")
+
+library(RODBC);
+channel <- odbcConnect("Mylocal")
+sqlTables(channel)
+sqlTables(channel, tableType = "TABLE")
+sqlQuery(channel, paste("USE databse_name"))
+Fact<-sqlQuery(channel, paste("select top 10 * from tablename"))
+Factp$Process
+BBE <- odbcConnect("connection_name", uid="xxxx", pwd="xxxx")
+sqlTables(connection_name, tableType = "TABLE")
+sqlQuery(connection_name, paste("USE databse_name"))
+sqlQuery(connection_name, paste("select top 10 * from tablename"))
